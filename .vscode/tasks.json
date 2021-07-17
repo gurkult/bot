@@ -1,0 +1,35 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Setup",
+            "type": "shell",
+            "command": "poetry install && poetry run task precommit && poetry run pre-commit run --all-files",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Bot With Docker",
+            "type": "shell",
+            "command": "docker-compose up",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Build and Run Bot With Docker",
+            "type": "shell",
+            "command": "docker-compose up --build",
+            "problemMatcher": [],
+        },
+        {
+            "label": "Run Bot Manually",
+            "type": "shell",
+            "command": "poetry run task bot",
+            "problemMatcher": [],
+        }
+    ]
+}

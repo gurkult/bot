@@ -32,7 +32,7 @@ Then navigate to the directory `cd gurkbot/`
    PREFIX = "!" # the prefix the bot should use, will default to "!" if this is not present
    ```
 
-4. Install poetry: `pip install -U poetry` and run the following:
+4. [Install poetry](https://python-poetry.org/docs/#installation) and run the following:
 
    ```sh
    # This will install the development and project dependencies.
@@ -49,7 +49,19 @@ Then navigate to the directory `cd gurkbot/`
    poetry run task bot
 
    ```
+
 5. Lint and format your code properly using `poetry run task lint`, and push changes `git push -u origin <name of new remote branch>`
+
+## Set up the Development Environment With an Editor
+
+### 1. VSCode
+<img src="assets/task.png"></img>
+
+1. Run the setup task by pressing `Ctrl + P` and typing `task Setup`
+
+2. Run the bot in development using any of the `Run Bot` tasks (You can run them just like the
+`Setup` task in the previous step). You can also run the default build task
+by pressing `Ctrl + Shift + B`
 
 ## Commands to Remember
 `poetry run task precommit` - Installs the pre-commit git hook
