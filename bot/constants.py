@@ -1,6 +1,6 @@
 import os
 import pathlib
-from typing import NamedTuple
+from typing import List, NamedTuple
 
 import yaml
 
@@ -77,6 +77,6 @@ class Roles(NamedTuple):
 # Bot replies
 with pathlib.Path("bot/resources/bot_replies.yml").open(encoding="utf8") as file:
     bot_replies = yaml.safe_load(file)
-    ERROR_REPLIES = bot_replies["ERROR_REPLIES"]
-    POSITIVE_REPLIES = bot_replies["POSITIVE_REPLIES"]
-    NEGATIVE_REPLIES = bot_replies["NEGATIVE_REPLIES"]
+    ERROR_REPLIES: List[str] = bot_replies["ERROR_REPLIES"]
+    POSITIVE_REPLIES: List[str] = bot_replies["POSITIVE_REPLIES"]
+    NEGATIVE_REPLIES: List[str] = bot_replies["NEGATIVE_REPLIES"]
