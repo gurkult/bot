@@ -80,3 +80,7 @@ with pathlib.Path("bot/resources/bot_replies.yml").open(encoding="utf8") as file
     ERROR_REPLIES = bot_replies["ERROR_REPLIES"]
     POSITIVE_REPLIES = bot_replies["POSITIVE_REPLIES"]
     NEGATIVE_REPLIES = bot_replies["NEGATIVE_REPLIES"]
+
+# Minecraft Server
+class Minecraft(NamedTuple):
+    server_address = "mc.gurkult.com"

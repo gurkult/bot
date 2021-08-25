@@ -21,6 +21,7 @@ fuzzywuzzy = "^0.18.0"
 asyncpg = "^0.23.0"
 python-dateutil = "^2.8.2"
 humanize = "^3.11.0"
+mcstatus = "^6.5.0"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.9.2"
