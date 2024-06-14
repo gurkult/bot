@@ -87,12 +87,17 @@ class Roles(NamedTuple):
     events = int(os.getenv("EVENTS_ID", 890656665328820224))
 
 
+class Tokens(NamedTuple):
+    wolfram_token = os.getenv("WOLFRAM_TOKEN")
+
+
 # Bot replies
 with pathlib.Path("bot/resources/bot_replies.yml").open(encoding="utf8") as file:
     bot_replies = yaml.safe_load(file)
     ERROR_REPLIES = bot_replies["ERROR_REPLIES"]
     POSITIVE_REPLIES = bot_replies["POSITIVE_REPLIES"]
     NEGATIVE_REPLIES = bot_replies["NEGATIVE_REPLIES"]
+
 
 # Minecraft Server
 class Minecraft(NamedTuple):
